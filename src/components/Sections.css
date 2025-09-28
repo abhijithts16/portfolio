@@ -1,0 +1,248 @@
+
+.section {
+  padding: 60px 20px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.section-heading {
+  padding-top: 10px; 
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.section-heading h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  font-weight: 700;
+  color: #222;
+}
+
+.heading-line {
+  width: 80px;
+  height: 3px;
+  background: #007bff;
+  margin: 0 auto;
+  border-radius: 2px;
+}
+
+.section-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 40px;
+  margin-bottom: 40px;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.7s ease-in-out;
+}
+
+.section-content.fade-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.section-left {
+  flex: 1;
+  max-width: 250px;
+  text-align: right;
+  color: #666;
+}
+
+.section-left .dates {
+  font-weight: 600;
+  color: #333;
+}
+
+.section-left .company {
+  font-size: 0.95rem;
+}
+
+.section-right {
+  flex: 3;
+  text-align: left;
+}
+
+.section-right h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: #222;
+}
+
+.section-right p {
+  line-height: 1.6;
+  color: #444;
+  font-size: 0.95rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .section-content {
+    flex-direction: column;
+    text-align: left;
+  }
+
+  .section-left {
+    text-align: left;
+    max-width: 100%;
+  }
+}
+
+/* Skills Grid */
+.skills-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* Each row starts hidden */
+.skill-row {
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s ease-out;
+}
+
+.skill-row.fade-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Skill card */
+.skills-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* Each row starts hidden */
+.skill-row {
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s ease-out;
+}
+
+.skill-row.fade-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Skill card */
+.skill-card {
+  flex: 1;
+  padding: 20px;
+  position: relative;
+  background-color: #f5f5f5;
+  border-radius: 8px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+  overflow: hidden;
+  box-sizing: border-box; /* ensure absolute children fit exactly */
+}
+
+/* Text inside card */
+.skill-text {
+  position: relative;
+  z-index: 2;
+  font-weight: 600;
+  color: #1a1a40;
+  text-align: center;
+  display: block;
+}
+
+/* Fill bar starts empty */
+.fill-bar {
+  position: absolute;
+  inset: 0; /* top:0; left:0; right:0; bottom:0 */
+  width: 0%;
+  background-color: rgba(0, 123, 255, 0.2);
+  z-index: 1;
+  transition: width 1s ease-out;
+}
+
+/* Fill bar animates on row visibility */
+.skill-card.fill .fill-bar {
+  width: 100%;
+}
+
+/* Optional: staggered animation delay for cards */
+.skill-card.fill:nth-child(1) .fill-bar { transition-delay: 0.2s; }
+.skill-card.fill:nth-child(2) .fill-bar { transition-delay: 0.4s; }
+
+/* Responsive for mobile */
+@media (max-width: 600px) {
+  .skill-row {
+    flex-direction: column;
+  }
+}
+
+/* Projects Grid */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 30px;
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s ease-out;
+}
+
+.projects-grid.fade-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Project Card */
+.project-card {
+  background: #f5f5f5;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* keeps links at bottom */
+  min-height: 320px; /* ensures consistent card size */
+}
+
+.project-card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+  color: #222;
+}
+
+.project-card p {
+  flex-grow: 1; /* fill available space */
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: #444;
+  margin-bottom: 20px;
+}
+
+.project-links {
+  display: flex;
+  gap: 15px;
+}
+
+.project-links a {
+  font-weight: 600;
+  color: #007bff;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.project-links a:hover {
+  color: #0056b3;
+}
+
+
+
+
+
