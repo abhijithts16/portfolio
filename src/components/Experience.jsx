@@ -7,7 +7,7 @@ export default function Experience() {
   return (
     <section className="section experience">
       <div className="section-heading">
-        <h2>Work Experience</h2>
+        <h2>Experience</h2>
         <div className="heading-line"></div>
       </div>
 

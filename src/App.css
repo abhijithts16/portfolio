@@ -146,3 +146,88 @@
   cursor: pointer;       
   transition: color 0.3s ease; 
 }
+
+/* =========================
+   Responsive Fixes
+========================= */
+
+/* For tablets and below */
+@media (max-width: 768px) {
+  /* Navbar */
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 15px 20px;
+  }
+
+  .navbar ul {
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 10px;
+    width: 100%;
+  }
+
+  .navbar ul li {
+    font-size: 16px;
+  }
+
+  /* Summary Section */
+  .summary {
+    flex-direction: column; /* stack image & details */
+    align-items: center;
+    padding: 30px 20px;
+    gap: 20px;
+  }
+
+  .profile-pic {
+    flex: unset;
+    max-width: 220px;
+  }
+
+  .profile-details {
+    width: 100%;
+    padding: 20px;
+    text-align: center; /* center text on mobile */
+  }
+
+  .profile-details strong {
+    width: auto; /* don’t force fixed width on mobile */
+    display: block;
+    margin-bottom: 6px;
+  }
+}
+
+/* For very small phones */
+@media (max-width: 480px) {
+  .navbar .logo {
+    font-size: 20px;
+  }
+
+  .profile-details h1 {
+    font-size: 24px;
+  }
+
+  .profile-details h3 {
+    font-size: 16px;
+  }
+
+  .profile-details p {
+    font-size: 14px;
+  }
+}
+
+:root {
+  --navbar-height: 50px; /* default desktop height */
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: var(--navbar-height);
+}
+
+/* mobile adjustment */
+@media (max-width: 768px) {
+  :root {
+    --navbar-height: 140px; /* taller navbar on mobile */
+  }
+}
